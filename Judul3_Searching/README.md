@@ -12,4 +12,5 @@ Dimulai dari input data yang udah siap, yaitu daftar nomor rekam medis di rumah 
 Link Youtube: https://youtu.be/36GpsXFy8Eg?si=mVOn3qd4WVDyvynv
 
 Tugas Tulis Tangan dari Kak AZMI:
+<img width="1536" height="1600" alt="tugas tulis azmi" src="https://github.com/user-attachments/assets/59944d7b-edde-470e-9c0e-f1e2bc447658" />
 
