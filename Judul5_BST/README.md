@@ -1,0 +1,17 @@
+Program ini adalah implementasi Binary Search Tree (BST) yang dirancang untuk mensimulasikan Buku Telepon Digital. Fungsi intinya adalah mengelola daftar kontak dengan menempatkan data secara otomatis terurut berdasarkan abjad, sehingga proses pencarian nomor HP dapat berjalan dengan sangat cepat dan efisien.
+
+Secara teknis, kelas NodeKontak berfungsi menyimpan data nama dan nomor HP, serta cabang kiri dan kanan. Sementara kelas BukuTeleponBST mengatur jalannya pohon melalui metode tambah_kontak untuk memasukkan data baru ke cabang yang tepat, cari_kontak untuk menemukan nomor HP secara cepat, dan tampilkan_semua untuk menyajikan seluruh daftar kontak di layar.
+Alurnya bekerja berdasarkan urutan abjad: kontak pertama menjadi puncak pohon (root), lalu kontak berikutnya otomatis masuk ke cabang kiri jika abjadnya lebih kecil, atau ke cabang kanan jika lebih besar. Saat pencarian dilakukan, program cukup membandingkan abjad dari atas ke bawah dan langsung mengabaikan jalur yang tidak sesuai. Hasil akhirnya adalah sistem yang mampu menampilkan daftar kontak rapi berurutan dari A sampai Z, sekaligus menemukan nomor HP secara instan tanpa perlu memeriksa seluruh isi memori.
+
+Penjelasan Alur Input & output:
+<img width="1919" height="1076" alt="Screenshot 2026-05-18 190832" src="https://github.com/user-attachments/assets/511957a5-b864-42bc-b649-81ce8c8d9a3a" />
+<img width="1919" height="1079" alt="Screenshot 2026-05-18 190902" src="https://github.com/user-attachments/assets/9621887c-0bbf-4df9-a191-de844f4b6d11" />
+<img width="1919" height="1079" alt="Screenshot 2026-05-18 190918" src="https://github.com/user-attachments/assets/8def832c-64f6-42c1-9d88-faa17d6ddc4b" />
+<img width="1919" height="1077" alt="Screenshot 2026-05-18 190940" src="https://github.com/user-attachments/assets/856c029f-b75c-499e-83ad-d77af5d1d00d" />
+
+Alur jalannya kode ini dimulai saat fungsi utama menerima input lima data kontak secara acak, ada Budi, Andi, Deni, Citra, dan Eka. Sebagai data pertama, Budi langsung menempati posisi puncak sebagai root. Kontak berikutnya otomatis diposisikan berdasarkan abjad melalui perbandingan dari atas ke bawah: jika lebih kecil masuk ke cabang kiri, dan jika lebih besar masuk ke cabang kanan. Jadi, Andi masuk di kiri Budi, Deni di kanan Budi, sedangkan Citra dan Eka berturut-turut menempati cabang kiri dan kanan dari Deni.
+
+Sesudah data tersusun di memori, program menampilkan seluruh isi buku telepon menggunakan metode In-Order Traversal. Sistem membaca data mulai dari cabang kiri terdalam, naik ke induk, lalu ke cabang kanan. Proses ini menghasilkan output pertama di terminal berupa daftar kontak yang otomatis terurut rapi dari A sampai Z (Andi, Budi, Citra, Deni, Eka), meskipun awalnya diinput secara acak.
+Tahap terakhir itu simulasi pencarian yang menghasilkan dua output di terminal. Saat mencari "Citra", program mulai dari Budi, langsung mengabaikan sisi kiri karena "Citra" lebih besar, lalu lompat ke kanan menuju Deni, dan ke kiri karena lebih kecil hingga nomor HP Citra berhasil dicetak hanya dalam tiga langkah. Sebaliknya, saat mencari "Zaki", program terus bergerak ke cabang kanan melewati Budi, Deni, hingga Eka karena abjad "Z" paling besar, dan ketika mendapati cabang setelah Eka kosong (None), sistem langsung mengeluarkan output laporan bahwa kontak "Zaki" tidak ditemukan.
+
+Link Youtube: https://youtu.be/z3Zg1Od8M-I?si=_PXh0um4JvbLEtVY
